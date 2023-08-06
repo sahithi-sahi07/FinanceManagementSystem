@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body> 
+        <header>
+            <label class="logo">Finance Management System</label>
+            <button id="logout-btn"><a href="{{ url_for('logout') }}">logout</a></button>
+        </header>
+        <div id="welcome-page">
+            <div class = "welcome-container">
+                <h2>Welcome!</h2>
+                <p>Please provide your financial goals and income to manage your finances effectively.</p>
+                <div class="welcome-group">
+                    <label for="financial-goals">Financial Goals:</label>
+                    <input type="text" id="financial-goals" placeholder="Enter your financial goals">
+                    <p class = "welcomePageErr" id="financialGoalEmpty"></p>
+                </div>
+                <div class="welcome-group">
+                    <label for="income">Income:</label>
+                    <input type="number" id="income" placeholder="Enter your monthly income">
+                    <p class = "welcomePageErr" id = "IncomeEmpty"></p>
+                </div>
+                <div class="welcome-group">
+                    <button id="next-button">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="finance-management" style="display: none; margin-top:20px;">
+            <div class="form-container">
+                <div class="goal-income">
+                    <div class="goal-container">
+                        <h3>Financial Goals</h3>
+                        <ul id="goal-list"></ul>
+                    </div>
+                    <div class="income-container">
+                        <h3>Income</h3>
+                        <div id="income-display"></div>
+                    </div>
+                </div>
+                <div class="total-balance" id="total-balance"></div>
+                <div class="form-group">
+                    <label for="transaction-name">Transaction Name:</label>
+                    <input type="text" id="transaction-name" placeholder="Enter transaction name">
+                </div>
+                <div class="form-group">
+                    <label for="transaction-amount">Amount:</label>
+                    <input type="number" id="transaction-amount" placeholder="Enter transaction amount">
+                </div>
+                <div class="form-group">
+                    <label for="transaction-category">Category:</label>
+                    <select id="transaction-category">
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                        <option value="savings">Savings</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button id="add-transaction">Add Transaction</button>
+                </div>
+            </div>
+
+            <div class="transaction-history">
+                <h2>Transaction History</h2>
+                <div class="filter-container" style="margin-bottom: 20px;">
+                    <label for="filter-category">Filter Category:</label>
+                    <select id="filter-category">
+                        <option value="all">All</option>
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                        <option value="savings">Savings</option>
+                    </select>
+                    <label for="filter-name">Filter Name:</label>
+                    <input type="text" id="filter-name" placeholder="Enter transaction name">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Transaction Name</th>
+                            <th>Amount</th>
+                            <th>Category</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="transaction-list">
+                        <!-- Transaction rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="chart-section">
+                <h2>Income Allocation</h2>
+                <canvas id="income-chart"></canvas>
+            </div>
+        </div>
+
+        <script src="{{ url_for('static', filename='script.js' ) }}"></script>
+        <script src="{{ url_for('static', filename='login.js' ) }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+    </body>
+</html>

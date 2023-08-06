@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Group Trip Expense Tracker</title>
+    <!-- Add CSS link here -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <label class="logo">Group Trip Expense Tracker</label>
+        <button id="logout-btn"><a href="{{ url_for('logout') }}">logout</a></button>
+    </header>
+
+    <!-- Expense input form -->
+    <div class="cal-btn">
+        <div id="expense-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" />
+    
+            <label for="expense-type">Expense Type:</label>
+            <select id="expense-type">
+                <option value="food">Food</option>
+                <option value="travel">Travel</option>
+                <option value="hotel">Hotel</option>
+                <option value="essentials">Essentials</option>
+                <option value="other">Other</option>
+            </select>
+    
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" />
+    
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+    </div>
+
+    <!-- Expense summary -->
+    <div id="expense-summary">
+        <h2>Expense Summary</h2>
+        <table class="my-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Food</th>
+                    <th>Travel</th>
+                    <th>Hotel</th>
+                    <th>Essentials</th>
+                    <th>Other</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="expense-table-body">
+                <!-- Expense data will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="cal-btn">
+        <button id="cal">Calulate</button>
+    </div>
+
+    <div id="result">
+
+    </div>
+
+    <!-- JavaScript code -->
+    <script src="{{ url_for('static', filename='expense-tracker.js') }}"></script>
+</body>
+</html>

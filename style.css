@@ -1,0 +1,340 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 750;
+    margin-left: 350px;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-left: 20px;
+    
+}
+.login-page {
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    animation: slide-in 0.8s ease;
+}
+.login-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.login-form-group {
+    margin-bottom: 20px;
+
+}
+.login-form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.login-form-group input[type="text"],
+.login-form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+#errmsg1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    color: red;
+    margin-bottom: 10px;
+}
+#errmsg2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#login-button {
+    background-color: #c1b9b7;
+    color: #000000;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+
+}
+
+
+
+.welcome-container {
+    max-width: 500px;
+    margin: 0 auto;
+ 
+}
+
+.welcome-group {
+    margin-bottom: 20px;
+}
+
+.welcome-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.welcome-group input[type="text"],
+.welcome-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.welcome-group button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.transaction-history {
+    margin-top: 20px;
+}
+
+.transaction-history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-history th,
+.transaction-history td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.transaction-history th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.total-balance {
+    text-align: right;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.goal-income {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+
+.goal-container,
+.income-container {
+    width: 45%;
+}
+
+.goal-container h3,
+.income-container h3 {
+    margin: 0;
+}
+
+#chart-section {
+    display: none;
+    margin-top: 20px;
+}
+
+#signup-page p,
+#signup-page h2 {
+    text-align: center;
+}
+
+#signup-page {
+    width: 300px;
+    margin: auto;
+}
+
+#login-button {
+    width: 111%;
+    height: 35px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+#logout-btn {
+    padding: 5px 10px;
+}
+
+#logout-btn a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    color: #333;
+}
+
+#signup-password,
+#signup-username {
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+#signup-button {
+    width: 105%;
+    height: 35px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.my-table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.my-table th {
+    background: black;
+    color: white;
+    border-left: 2px solid white;
+    padding: 5px 25px;
+}
+
+.my-table td{
+    border: 1.5px solid black;
+    padding: 5px 25px;
+}
+
+#expense-form {
+    margin-top: 50px;   
+}
+
+#cal {
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.cal-btn {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    
+}
+
+.cards {
+    display: flex;
+    height: 100vh;
+
+}
+
+.card {
+    width: 600px;
+    margin: 20px;
+    position: relative;
+    
+}
+
+.card img {
+    width: 70%;
+    height: 60%;
+    border-radius: 60px;
+    
+}
+
+#expense-summary h2 {
+    text-align: center;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 800;
+    font-size: 27px;
+}
+.middle-btn{
+    padding: 10px;
+    border-radius: 3px;
+    border-width: 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#result {
+    text-align: center;
+}
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <label class="logo">Finance Management System</label>
+        <button id="logout-btn"><a href="{{ url_for('logout') }}">logout</a></button>
+    </header>
+    <div class="cards" style = "background: linear-gradient(to bottom, #f1f2f3, #a1a5a7)";>
+        <div class="card" style = "align-items: center; text-align: center;">
+            <h2 style = "font-family:'Lucida Sans'; margin-left: 50px;">Empower Your Financial Journey</h2>
+            <a href="{{ url_for('home') }}"><img src="{{ url_for('display_image', filename='home.jpg') }}" alt="" class="img-style"></a>
+            
+            <p style = "font-family:Georgia, 'Times New Roman', Times, serif">Effortlessly manage your finances and achieve your goals with our intuitive finance management system.</p>
+            <p style = "font-family:Georgia, 'Times New Roman', Times, serif">Visualize your spending patterns with interactive charts and graphs. Gain insights into where your money is going and make informed financial decisions.</p> 
+            <a href ="{{ url_for('home') }}"> <button class = "middle-btn">Start Tracking!</button></a>
+        </div>
+        
+        <div class="card" style = "align-items: center; text-align: center;">
+            <h2 style = "font-family:'Lucida Sans'; margin-left: 50px;">Travel Finance</h2>
+            <a href="{{ url_for('trip') }}"><img src="{{ url_for('display_image', filename='trip.jpg') }}" alt="" class="img-style"></a>
+            
+            <p style = "font-family:Georgia, 'Times New Roman', Times, serif">Budget smart for your adventures and track expenses while exploring new destinations.</p>
+            <p style = "font-family:Georgia, 'Times New Roman', Times, serif">Effortlessly manage trip expenses with our intuitive Trip Expense Management tool. Record each expenditure made by your friends during the trip.</p>  
+            <a href ="{{ url_for('trip') }}"> <button class = "middle-btn">Calculate Bills</button></a>
+        </div>
+    </div>
+</body>
+</html>
+
